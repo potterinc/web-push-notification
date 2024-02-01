@@ -1,6 +1,8 @@
 import express, { Request, Response, Router } from 'express';
+import PatientRecord from '../services/patient.service';
 
 const baseRouter: Router = express.Router();
+const patientRecord = new PatientRecord();
 
 baseRouter
   .route('')
@@ -15,10 +17,10 @@ baseRouter
   // Patient Route
   baseRouter.route('/patient')
   // Add patient record
-  .post()
+  .post(patientRecord.create)
 
   // View all record
-  .get()
+  .get(patientRecord.viewAll)
 
   baseRouter.route('patient/:id')
 

@@ -4,6 +4,7 @@ import express, { Application, Request, Response } from "express";
 import helmet from "helmet";
 import baseRouter from "./routes/index.routes";
 import AppConfig from "./config/app.config";
+import './config/app.server';
 
 // Loading environmental variables on production
 if (process.env.NODE_ENV !== 'production')

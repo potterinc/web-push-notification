@@ -8,18 +8,12 @@ interface IPatient extends Document{
   dateOfBirth: string;
   gender: string;
   email?: string;
-  maritialStatus?: string;
+  maritalStatus?: string;
   weight?: number;
   height?: number;
   genotype?: string;
   bloodGroup?: string;
-  HealthStatus?: {
-    bloodPressure: {
-      SIS: number;
-      DIA: number;
-    },
-    sugarLevel?:number
-  },
+  HealthStatus?:any,
   emergencyContact?: {
     firstName: string;
     lastName: string;
@@ -27,7 +21,7 @@ interface IPatient extends Document{
     address?: string;
     email?: string;
   },
-  MedicalHistory:object;
+  MedicalHistory?:any;
 }
 
 export default IPatient;
