@@ -14,23 +14,23 @@ baseRouter
     });
   })
 
-  // Patient Route
-  baseRouter.route('/patient')
+// Patient Route
+baseRouter.route('/patient')
   // Add patient record
   .post(patientRecord.create)
 
   // View all record
   .get(patientRecord.viewAll)
 
-  baseRouter.route('patient/:id')
+baseRouter.route('/patient/:id')
 
   // View a patient
-  .get()
+  .get(patientRecord.viewOne)
 
   // Update a patient record
-  .patch()
+  .patch(patientRecord.update)
 
   // Delete a patient record
-  .delete()
+  .delete(patientRecord.remove);
 
-  export default baseRouter
+export default baseRouter
