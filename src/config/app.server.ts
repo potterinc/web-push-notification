@@ -8,7 +8,7 @@ if (process.env.NODE_ENV !== 'production')
     configDotenv();
 
 // Connecting to database
-const dbConnection = mongoose.connect(`${AppConfig.db.url}`, {
+const dbConnection = mongoose.connect(AppConfig.db.url, {
     retryWrites: true,
     w: 'majority'
 })
