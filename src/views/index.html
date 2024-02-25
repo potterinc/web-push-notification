@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Push Notification</title>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script src="./OneSignalSDKWorker.js"></script>
+
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(function (OneSignal) {
+      OneSignal.init({
+        appId: "cce1c082-0357-4fae-bc4e-c17dd39165a4",
+        notifyButton: {
+          enable: true,
+        },
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h2>Push Notification One Signal</h2>
+  <p id="response"></p>
+
+  <button type="button" onclick="">Send Push</button>
+  <script>
+    // // function sendPush() {
+    //   fetch('http://localhost:5000/api/v1/notification', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     }
+    //   })
+    //     .then(res => res.json())
+    //     .then(data => {
+    //       if (data)
+    //         return document.getElementById('response').innerHTML = JSON.stringify(data);
+    //     }).catch(e => {
+    //       return document.getElementById('response').innerHTML = JSON.stringify(e);
+    //     })
+    // // };
+  </script>
+
+</body>
+
+</html>

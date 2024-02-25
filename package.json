@@ -1,20 +1,23 @@
 {
-  "name": "remote-patient-health-checker",
+  "name": "one-push-notify",
   "version": "1.0.0",
   "description": "Patient remote health monitoring system",
   "main": "app.js",
   "dependencies": {
+    "axios": "^1.6.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.1",
     "ee-first": "^1.1.1",
     "express": "^4.18.2",
     "helmet": "^7.1.0",
-    "mongoose": "^8.1.1"
+    "mongoose": "^8.1.1",
+    "node-fetch": "^2.7.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.10",
+    "@types/node-fetch": "^2.6.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
@@ -23,23 +26,6 @@
     "dev": "nodemon src/app.ts",
     "build": "tsc -p ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/potterinc/remote-patient-health-checker.git"
-  },
-  "keywords": [
-    "health",
-    "patient",
-    "EMR",
-    "medical",
-    "hospital",
-    "medical",
-    "recorder"
-  ],
   "author": "Arekhandia Harry",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/potterinc/remote-patient-health-checker/issues"
-  },
-  "homepage": "https://github.com/potterinc/remote-patient-health-checker#readme"
+  "license": "ISC"
 }
